@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital@1&family=Libre+Baskerville:wght@700&display=swap');
+@import url('root.css');
+/* generics */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Libre Baskerville', serif;
+    background-color:var(--light-color-back);
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: var(--size-medium);
+}
+
+h3 {
+    font-size: var(--medium-light);
+}
+
+p {
+    font-size: 21px;
+}
+
+ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* header with name and image */
+header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 80vh;
+    background-image: url(./img/office.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+
+}
+
+header::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: .9;
+	z-index: -1;
+}
+
+.header-part {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    border-radius: 50%;   
+}
+
+.header-part > h1 {
+    color: white;
+    margin: 1rem;
+    padding: 0.7rem;
+    font-size: var(--big-size);
+    border-bottom: 2px solid white;
+
+}
+
+#greetings {
+    border-bottom: none;
+    font-style: italic;
+}
+
+.header-part > h1:hover {
+    color: var(--light-gold);
+}
+
+
+/* all titles sections */
+section > h2 {
+
+    padding: 1rem;
+    font-size: var(--light-size);
+    text-transform: uppercase;
+    color: var(--dark-gold);
+    border-bottom: 3px solid black;
+
+}
+
+/* nav with links */
+
+nav {
+    background-color: var(--light-color);
+    margin: 3rem;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: center;    
+}
+
+nav > ul > li {
+    border-bottom: 2px solid var(--main-dark-color);
+    border-top: 2px solid var(--main-dark-color);     
+    color: var(--list-dark-blue);   
+    padding: 2.1rem;
+}
+a:link {
+    color: var(--main-dark-color);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--main-dark-color);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+  
+a:hover {
+    color : var(--gold);
+    cursor: pointer;
+}
+  
+a:active {
+    color: var(--main-dark-color);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+}
+
+/* biography with cards */
+
+.biography {
+    display: grid;
+    min-width: 0;
+    grid-template-columns: repeat(2,1fr);
+    align-self: stretch;
+    grid-row-gap: 3rem;
+    opacity: 96%;
+    background-color: var(--light-color); 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 2% 2%;
+    border-radius: 10%;
+    border: solid .5px var(--main-dark-color);
+    background-color: var(--light-color-back);
+}
+
+.card-row {
+    color: var(--main-dark-color);
+    margin: 2%;
+    text-align: center;
+    width: 90%;
+}
+
+.card-row > *:hover {
+    color: var(--list-dark-blue);
+}
+
+.card-row > h2 {
+    padding: 1rem;
+    border-bottom: 2px solid var(--gold);
+}
+
+.card-row > ul > li {
+    font-size: var(--light-size);
+    padding: 1rem;
+}
+
+.card-row > ul > li > p {
+    color:var(--medium-gold);
+    font-size: var(--intermedium-size);
+
+}
+
+.about-me {
+    text-align: center;
+    color: var(--main-dark-color);
+    padding: 3rem;
+    line-height: 2.5rem;
+    
+}
+
+/* all skill icons */
+#skills {
+    display: grid;
+    min-width: 0;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1.3rem;
+    justify-items: center;
+    padding: 1rem;
+    margin: 1rem;
+
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0.5rem;
+    color: var(--list-dark-blue);
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+.title > h2 {
+    width: 50%;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--dark-gold);
+}
+
+/*  personal info */
+.quick-id {
+    display: flex;
+    background: linear-gradient(23deg, rgba(206,233,255,1) 2%, rgba(117,194,246,1) 16%, rgba(29,93,155,1) 17%);
+}
+
+.generic-info-id {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 1rem;
+}
+
+.common-list {
+    font-size: var(--intermedium-size);
+    color: white;
+    text-align: left;
+    padding: 2rem;
+}
+
+.generic-info-id  > .first-content-id > ul > li {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-right: 0.1px solid var(--light-gold);
+    border-bottom: 0.1rem solid var(--light-gold);
+}
+
+.generic-info-id > .content-id > ul > li {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-right: 0.1px solid var(--gold);
+    border-bottom: 0.1rem solid var(--gold);
+
+}
+
+/* studies carrer */
+.study {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+}
+
+.study-element {
+    border-radius: 2%;
+    border: 0.2rem solid var(--light-gold);
+    margin: 1.5rem;
+    padding: .5rem;
+    color: var(--list-dark-blue);
+    background-color: white;
+}
+
+.study-element > p {
+
+    color: black;
+    text-align: center;
+    font-size: var(--light-size);
+    border-bottom: 2px solid var(--dark-gold);
+    margin: 0.2rem;
+    padding-bottom: 0.7rem;
+}
+
+/* hobbies & interests */
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 0.5rem;
+    justify-content: space-around;  
+}
+
+.hobby-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+    padding: 1rem;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    background-color: var(--medium-grey);
+}
+
+.hobby-element > h4 {
+    color: var(--list-dark-blue);
+    padding: .5rem;
+    font-size: var(--minimun-size);
+    text-decoration: underline var(--gold);
+}
+
+.hobby-element > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+
+}
+
+/* footer section */
+footer {
+    display: grid;
+    grid-template-areas: 
+        "content content"
+        "last-section last-section";
+    gap: 2rem;
+    margin-top: 5rem;
+    min-height: 10vh;
+    background-color: rgb(97, 144, 183);
+    color: white;
+}
+
+.first-section-footer, .second-section-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: .7rem;
+}
+
+.goodbye > h3 {
+    font-size: var(--light-size);
+    font-style: oblique;
+    
+}
+
+.last-info > * {
+    padding: .6rem;
+}
+
+.last-info > h3 {
+    font-size: var(--light-size); 
+}
+
+.last-info > p {
+    font-size: var(--very-light-size); 
+    font-style: oblique;
+}
+
+.socials > ul {
+    display: flex;
+    gap: .8rem;
+}
+
+.socials > ul > li {
+    cursor: pointer;
+}
+
+.last-section {
+    grid-area: last-section;
+    background-color: black;
+    color:white;
+}
+
+.last-section > h4 {
+    font-size: var(--minimum-size);
+    padding: .4rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1100px) {
+    .quick-id {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 970px) {
+
+    header {
+        min-height: 50vh;
+    }
+
+    .biography {
+        display: flex;
+        flex-direction: column; 
+        opacity: 96%;
+        background-color: var(--light-color); 
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;    
+    }
+
+    nav > ul > li {
+        width: 100%;
+        text-align: center;
+        padding: 2% 1.5% !important;
+        border-bottom: 1px solid var(--main-dark-color) !important;
+        border-top: 0 !important;
+    }
+
+    .header-part > h1 {
+        color: white;
+        margin: 0.5rem !important;
+        padding: 0.3rem !important;
+        font-size: var(--medium-light) !important;
+        border-bottom: 2px solid white;
+    
+    }
+
+    .common-list {
+        padding: 1rem;
+    }
+    
+    .generic-info-id  > .first-content-id > ul > li {
+        padding: 0.7rem;
+        font-size: var(--light-size);
+    }
+    
+    .generic-info-id > .content-id > ul > li {
+        padding: 0.7rem;
+        font-size: var(--light-size);
+    }
+
+    #skills {
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2rem;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    nav > ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    nav > ul > li > a > h3 {
+        font-size: var(--intermedium-size);
+        padding: 0.5rem;
+    }
+
+    #skills {
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 3rem;
+    }
+
+    .title > h2 {
+        font-size: var(--medium-light);
+    }
+
+    .about-me > p {
+        font-size: var(--light-size);
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 2.1rem;
+    }
+    
+    .generic-info-id  > .first-content-id > ul > li {
+        padding: 0.5rem;
+        font-size: var(--very-light-size);
+    }
+    
+    .generic-info-id > .content-id > ul > li {
+        padding: 0.5rem;
+        font-size: var(--very-light-size);
+    }
+
+}
+
+@media (hover: hover) {
+
+    .hobby-element:hover {
+        background-color: var(--main-dark-color);
+    }
+
+    .hobby-element > h4:hover {
+        color: white;
+    }
+
+}
