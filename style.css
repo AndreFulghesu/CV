@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caladea:ital@1&family=Libre+Baskerville:wght@700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('root.css');
 /* generics */
 
@@ -205,7 +204,6 @@ nav > ul > li > a {
 
 }
 
-
 .about-me {
     text-align: center;
     color: var(--main-dark-color);
@@ -213,45 +211,6 @@ nav > ul > li > a {
     line-height: 2.5rem;
     
 }
-
-/* about me section 
-#about-me {
-    padding: 1rem;
-    background-image: url(./img/book.jpg);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-    height: 20vh;
-    margin: 1.1rem;
-	z-index: 1;
-    position: relative;
-    text-align: center;
-    border-radius: 3%;
-    width: 85%;
-}
-
-#about-me::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: black;
-    border-radius: 7%;
-	opacity: .9;
-	z-index: -1;
-}
-
-#about-me > * {
-    margin: 0.2rem;
-    padding: 0.2rem;
-    color: var(--light-color-back);
-    font-family: 'Caladea', serif;
-    font-style: italic;
-}
-
-*/
 
 /* all skill icons */
 #skills {
@@ -280,30 +239,6 @@ nav > ul > li > a {
     padding: 1.5rem;
     border-bottom: 1px solid var(--dark-gold);
 }
-
-
-
-/* road map 
-
-.road-map {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 1rem;
-}
-
-.round {
-    display: flex;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 50%;
-}
-
-.round > p {
-    text-align: center;
-    padding: 1rem;
-}
-
-*/
 
 /*  personal info */
 .quick-id {
@@ -402,6 +337,71 @@ nav > ul > li > a {
     padding: 0.5rem;
 
 }
+
+/* footer section */
+footer {
+    display: grid;
+    grid-template-areas: 
+        "content content"
+        "last-section last-section";
+    gap: 2rem;
+    margin-top: 5rem;
+    min-height: 10vh;
+    background-color: rgb(97, 144, 183);
+    color: white;
+}
+
+.first-section-footer, .second-section-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: .7rem;
+}
+
+.goodbye > h3 {
+    font-size: var(--light-size);
+    font-style: oblique;
+    
+}
+
+.last-info > * {
+    padding: .6rem;
+}
+
+.last-info > h3 {
+    font-size: var(--light-size); 
+}
+
+.last-info > p {
+    font-size: var(--very-light-size); 
+    font-style: oblique;
+}
+
+.socials > ul {
+    display: flex;
+    gap: .8rem;
+}
+
+.socials > ul > li {
+    cursor: pointer;
+}
+
+.last-section {
+    grid-area: last-section;
+    background-color: black;
+    color:white;
+}
+
+.last-section > h4 {
+    font-size: var(--minimum-size);
+    padding: .4rem;
+    text-align: center;
+}
+
+
+
+
 
 
 
@@ -532,7 +532,7 @@ nav > ul > li > a {
     }
 
     .hobby-element > h4:hover {
-    color: white;
+        color: white;
     }
 
 }
