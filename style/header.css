@@ -1,0 +1,57 @@
+/* header with name and image */
+header {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 80vh;
+    background-image: url(../img/office.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+
+}
+
+header::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: .9;
+	z-index: -1;
+}
+
+.header-part {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    border-radius: 50%;   
+}
+
+.header-part > h1 {
+    color: white;
+    margin: 1rem;
+    padding: 0.7rem;
+    font-size: var(--big-size);
+    border-bottom: 2px solid white;
+
+}
+
+#greetings {
+    border-bottom: none;
+    font-style: italic;
+}
+
+.header-part > h1:hover {
+    color: var(--light-gold);
+}

@@ -1,0 +1,60 @@
+/*  personal info */
+.quick-id {
+    display: flex;
+    background: linear-gradient(23deg, rgba(206,233,255,1) 2%, rgba(117,194,246,1) 16%, rgba(29,93,155,1) 17%);
+}
+
+.generic-info-id {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 1rem;
+}
+
+.common-list {
+    font-size: var(--intermedium-size);
+    color: white;
+    text-align: left;
+    padding: 2rem;
+}
+
+.generic-info-id  > .first-content-id > ul > li {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-right: 0.1px solid var(--light-gold);
+    border-bottom: 0.1rem solid var(--light-gold);
+}
+
+.generic-info-id > .content-id > ul > li {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-right: 0.1px solid var(--gold);
+    border-bottom: 0.1rem solid var(--gold);
+
+}
+
+/* studies carrer */
+.study {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+}
+
+.study-element {
+    border-radius: 2%;
+    border: 0.2rem solid var(--light-gold);
+    margin: 1.5rem;
+    padding: .5rem;
+    color: var(--list-dark-blue);
+    background-color: white;
+}
+
+.study-element > p {
+
+    color: black;
+    text-align: center;
+    font-size: var(--light-size);
+    border-bottom: 2px solid var(--dark-gold);
+    margin: 0.2rem;
+    padding-bottom: 0.7rem;
+}

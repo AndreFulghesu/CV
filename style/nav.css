@@ -1,0 +1,44 @@
+/* nav with links */
+nav {
+    background-color: var(--light-color);
+    margin: 3rem;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: center;    
+}
+
+nav > ul > li {
+    border-bottom: 2px solid var(--main-dark-color);
+    border-top: 2px solid var(--main-dark-color);     
+    color: var(--list-dark-blue);   
+    padding: 2.1rem;
+}
+a:link {
+    color: var(--main-dark-color);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--main-dark-color);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+  
+a:hover {
+    color : var(--gold);
+    cursor: pointer;
+}
+  
+a:active {
+    color: var(--main-dark-color);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+}

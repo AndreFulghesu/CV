@@ -1,0 +1,36 @@
+/* hobbies & interests */
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 0.5rem;
+    justify-content: space-around;  
+}
+
+.hobby-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+    padding: 1rem;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    background-color: var(--medium-grey);
+}
+
+.hobby-element > h4 {
+    color: var(--list-dark-blue);
+    padding: .5rem;
+    font-size: var(--minimun-size);
+    text-decoration: underline var(--gold);
+}
+
+.hobby-element > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+
+}
