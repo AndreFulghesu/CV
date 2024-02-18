@@ -2,59 +2,66 @@
 footer {
     display: grid;
     grid-template-areas: 
-        "content content"
-        "last-section last-section";
-    gap: 2rem;
-    margin-top: 5rem;
+        "first-section-footer"
+        "last-section-footer";
+    gap: .7rem;
     min-height: 10vh;
-    background-color: rgb(97, 144, 183);
-    color: white;
+    background-color:var(--light-color-back);
+    color: black;
+    margin: 1rem;
+
 }
 
-.first-section-footer, .second-section-footer {
+.first-section-footer {
+    grid-area: first-section-footer;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+
+.footer-element {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: .7rem;
+    gap: .8rem;
+    border-left: 1px solid black;
+    padding: .5rem;
 }
 
-.goodbye > h3 {
-    font-size: var(--light-size);
-    font-style: oblique;
-    
+.footer-element > h2 {
+    font-size: var(--intermedium-size);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
 }
 
-.last-info > * {
-    padding: .6rem;
+.footer-element > p {
+    font-size: var(--very-light-size);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500;
 }
 
-.last-info > h3 {
-    font-size: var(--light-size); 
-}
-
-.last-info > p {
-    font-size: var(--very-light-size); 
-    font-style: oblique;
-}
-
-.socials > ul {
+.footer-element > ul {
     display: flex;
     gap: .8rem;
+    padding: 0;
 }
 
-.socials > ul > li {
-    cursor: pointer;
+.last-section-footer {
+    grid-area: last-section-footer;
+    background-color:var(--light-color-back);
+    color:black;
+    border-top: 1px solid var(--gold);
 }
 
-.last-section {
-    grid-area: last-section;
-    background-color: black;
-    color:white;
-}
-
-.last-section > h4 {
+.last-section-footer > h4 {
     font-size: var(--minimum-size);
-    padding: .4rem;
+    padding: .8rem;
     text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    text-indent: 30px;
+    letter-spacing: .2rem;
+    
 }

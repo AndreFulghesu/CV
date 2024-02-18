@@ -6,22 +6,10 @@
     grid-gap: 1.3rem;
     justify-items: center;
     padding: 1rem;
-    margin: 1rem;
+    margin: 5rem;
 
 }
 
-.title {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 0.5rem;
-    color: var(--list-dark-blue);
-    margin: 1rem;
-    padding: 1.5rem;
-}
-
-.title > h2 {
-    width: 50%;
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--dark-gold);
+.card-row > img {
+    padding: 1rem;
 }
